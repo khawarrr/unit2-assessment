@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Dos</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>To do List</h1>
+  
+
+    <ul>
+      <% if(!todos.length) { %>
+        <h3>There are no To Dos yet!</h3>
+        
+        <% } else { %>
+          
+          <% todos.forEach(function(t) { %>
+              <li>
+                <%= t %> - Not Done 
+                </li>
+          
+              <% }) %> 
+        <% } %>
+
+  
+    </ul>
+
+    <hr>
+    <body>
+
+      <form action="/" method="POST" autocomplete="off">
+        <input type="text" required name="todo">
+        <button type="submit">Add Todo</button>
+      </form>
+    </body>
+
+  </body>
+</html>
